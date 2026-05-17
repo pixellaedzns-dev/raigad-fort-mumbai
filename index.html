@@ -177,8 +177,9 @@
   }
 
   /* ─── TRAIN TABLE ─── */
-  .train-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 14px; box-shadow: 0 2px 20px rgba(15,26,13,0.1); }
-  table { width: 100%; border-collapse: collapse; background: white; min-width: 560px; }
+  .train-table-wrap { border-radius: 14px; overflow: hidden; box-shadow: 0 2px 20px rgba(15,26,13,0.1); }
+  table { width: 100%; border-collapse: collapse; background: white; }
+  thead { display: none; }
   thead tr { background: var(--deep); }
   th {
     padding: 13px 14px;
@@ -186,19 +187,44 @@
     letter-spacing: 1.5px; text-transform: uppercase;
     color: rgba(255,255,255,0.75); text-align: left;
   }
-  td {
-    padding: 13px 14px;
-    font-size: 13px;
-    border-bottom: 1px solid rgba(42,74,32,0.08);
-    vertical-align: middle;
+  tbody tr {
+    display: block;
+    background: white;
+    border-bottom: 3px solid var(--mist);
+    padding: 14px 16px;
   }
-  tbody tr:last-child td { border-bottom: none; }
-  tbody tr:hover { background: var(--mist); }
+  tbody tr:last-child { border-bottom: none; }
+  td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 0;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(42,74,32,0.05);
+    gap: 10px;
+  }
+  td:last-child { border-bottom: none; }
+  td::before {
+    content: attr(data-label);
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--stone); white-space: nowrap;
+    min-width: 68px; flex-shrink: 0;
+  }
   .from-station { font-weight: 700; color: var(--forest); }
   .train-name { font-weight: 600; color: var(--text); font-size: 12px; }
   .train-num { font-size: 10px; color: var(--stone); }
   .fare-cell { color: var(--saffron); font-weight: 700; font-size: 13px; }
   .duration-cell { color: var(--sub); font-size: 12px; font-weight: 500; }
+
+  @media (min-width: 580px) {
+    thead { display: table-header-group; }
+    tbody tr { display: table-row; padding: 0; border-bottom: none; }
+    tbody tr:hover { background: var(--mist); }
+    td { display: table-cell; padding: 13px 14px; border-bottom: 1px solid rgba(42,74,32,0.08); }
+    td::before { display: none; }
+    tbody tr:last-child td { border-bottom: none; }
+  }
   .tip-box {
     background: var(--mist);
     border-left: 3px solid var(--saffron);
@@ -303,10 +329,13 @@
   .budget-row-cost { color: var(--gold); font-weight: 700; font-size: 14px; }
 
   .budget-sub-table { width: 100%; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+  .budget-sub-table thead { display: table-header-group !important; }
   .budget-sub-table th { padding: 10px 14px; font-size: 10px; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.04); text-align: left; }
-  .budget-sub-table td { padding: 10px 14px; font-size: 12px; color: rgba(255,255,255,0.8); border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .budget-sub-table tbody tr { display: table-row !important; padding: 0 !important; border-bottom: none !important; background: transparent !important; }
+  .budget-sub-table td { display: table-cell !important; padding: 10px 14px; font-size: 13px; color: rgba(255,255,255,0.85); border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .budget-sub-table td::before { display: none !important; }
   .budget-sub-table tr:last-child td { border-bottom: none; }
-  .budget-sub-table .cost { color: var(--gold); font-weight: 700; text-align: right; }
+  .budget-sub-table .cost { color: var(--gold); font-weight: 700; text-align: right; font-size: 14px; }
 
   .total-card {
     background: var(--saffron);
@@ -465,7 +494,12 @@
 
 <!-- HERO -->
 <div class="hero">
-  <div class="hero-img"></div>
+  <div class="hero-img">
+  <img 
+    src="https://travelteamindia.com/images/raigad-fort.jpg" 
+    alt="Raigad Fort"
+  />
+</div>
   <div class="hero-content">
     <div class="hero-eyebrow">🏰 Complete Budget Guide</div>
     <h1>
@@ -517,28 +551,28 @@
       </thead>
       <tbody>
         <tr>
-          <td><span class="from-station">Ernakulam (ERS)</span><br><span style="font-size:11px;color:var(--stone)">→ Panvel (PNVL)</span></td>
-          <td><span class="train-name">Netravati Express</span><br><span class="train-num">#16345</span></td>
-          <td class="duration-cell">16–17 hrs</td>
-          <td class="fare-cell">₹550–₹1,250<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+          <td data-label="From"><span class="from-station">Ernakulam (ERS)</span><br><span style="font-size:11px;color:var(--stone)">→ Panvel (PNVL)</span></td>
+          <td data-label="Train"><span class="train-name">Netravati Express</span><br><span class="train-num">#16345</span></td>
+          <td data-label="Duration" class="duration-cell">16–17 hrs</td>
+          <td data-label="Fare" class="fare-cell">₹550–₹1,250<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
         </tr>
         <tr>
-          <td><span class="from-station">Kozhikode (CLT)</span><br><span style="font-size:11px;color:var(--stone)">→ Panvel (PNVL)</span></td>
-          <td><span class="train-name">Mangala Lakshadweep Express</span><br><span class="train-num">#12617</span></td>
-          <td class="duration-cell">18–19 hrs</td>
-          <td class="fare-cell">₹600–₹1,300<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+          <td data-label="From"><span class="from-station">Kozhikode (CLT)</span><br><span style="font-size:11px;color:var(--stone)">→ Panvel (PNVL)</span></td>
+          <td data-label="Train"><span class="train-name">Mangala Lakshadweep Express</span><br><span class="train-num">#12617</span></td>
+          <td data-label="Duration" class="duration-cell">18–19 hrs</td>
+          <td data-label="Fare" class="fare-cell">₹600–₹1,300<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
         </tr>
         <tr>
-          <td><span class="from-station">Kannur (CNN)</span><br><span style="font-size:11px;color:var(--stone)">→ Mumbai LTT</span></td>
-          <td><span class="train-name">Matsyagandha Express</span><br><span class="train-num">#12620</span></td>
-          <td class="duration-cell">19–20 hrs</td>
-          <td class="fare-cell">₹600–₹1,300<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+          <td data-label="From"><span class="from-station">Kannur (CNN)</span><br><span style="font-size:11px;color:var(--stone)">→ Mumbai LTT</span></td>
+          <td data-label="Train"><span class="train-name">Matsyagandha Express</span><br><span class="train-num">#12620</span></td>
+          <td data-label="Duration" class="duration-cell">19–20 hrs</td>
+          <td data-label="Fare" class="fare-cell">₹600–₹1,300<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
         </tr>
         <tr>
-          <td><span class="from-station">Thiruvananthapuram (TVC)</span><br><span style="font-size:11px;color:var(--stone)">→ Mumbai CSMT</span></td>
-          <td><span class="train-name">Netravati Express</span><br><span class="train-num">#16345</span></td>
-          <td class="duration-cell">20–22 hrs</td>
-          <td class="fare-cell">₹650–₹1,400<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+          <td data-label="From"><span class="from-station">Thiruvananthapuram (TVC)</span><br><span style="font-size:11px;color:var(--stone)">→ Mumbai CSMT</span></td>
+          <td data-label="Train"><span class="train-name">Netravati Express</span><br><span class="train-num">#16345</span></td>
+          <td data-label="Duration" class="duration-cell">20–22 hrs</td>
+          <td data-label="Fare" class="fare-cell">₹650–₹1,400<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
         </tr>
       </tbody>
     </table>
