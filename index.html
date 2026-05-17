@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raigad Fort from Kerala — Complete Budget Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@700;900&family=Raleway:wght@300;400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #e8651a;
+    --gold: #c9941a;
+    --dark: #0f1a0d;
+    --deep: #1a2e14;
+    --forest: #2a4a20;
+    --stone: #8b7355;
+    --cream: #f5efe0;
+    --warm: #fdf6e8;
+    --mist: #eef3e8;
+    --text: #1e1a14;
+    --sub: #5a5040;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--warm);
+    font-family: 'Raleway', sans-serif;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+  }
+  .hero-img {
+    position: absolute; inset: 0;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Raigad_fort.jpg/1280px-Raigad_fort.jpg') center/cover no-repeat;
+  }
+  .hero-img::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(10,20,8,0.2) 0%,
+      rgba(10,20,8,0.15) 30%,
+      rgba(10,20,8,0.75) 70%,
+      rgba(10,20,8,0.95) 100%
+    );
+  }
+  .hero-content {
+    position: relative;
+    padding: 32px 20px 48px;
+  }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--saffron);
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 18vw, 110px);
+    line-height: 0.9;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .hero h1 .from {
+    font-family: 'Cinzel', serif;
+    font-size: 0.38em;
+    display: block;
+    color: var(--gold);
+    letter-spacing: 6px;
+    margin-bottom: 4px;
+  }
+  .hero h1 .kerala {
+    color: var(--saffron);
+    display: block;
+    font-size: 0.75em;
+  }
+  .hero-tagline {
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 14px;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .hero-badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 7px 13px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .hero-badge .dot { color: var(--gold); font-size: 16px; line-height: 1; }
+
+  /* ─── ROUTE STRIP ─── */
+  .route-strip {
+    background: var(--deep);
+    padding: 24px 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .route-strip::-webkit-scrollbar { display: none; }
+  .route-inner {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: max-content;
+    margin: 0 auto;
+  }
+  .route-stop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .route-icon {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+  }
+  .route-label { font-size: 9px; font-weight: 700; letter-spacing: 1px; color: rgba(255,255,255,0.6); text-transform: uppercase; }
+  .route-arrow { color: var(--gold); font-size: 18px; margin: 0 2px; padding-bottom: 14px; }
+  .route-time { font-size: 9px; color: var(--saffron); font-weight: 600; }
+
+  /* ─── SECTIONS ─── */
+  .section { padding: 48px 20px; }
+  .section + .section { border-top: 1px solid rgba(42,74,32,0.12); }
+
+  .section-tag {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 10px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--saffron);
+    margin-bottom: 12px;
+  }
+  .section-tag::after { content: ''; display: block; width: 20px; height: 2px; background: currentColor; }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(22px, 6vw, 34px);
+    font-weight: 700;
+    color: var(--deep);
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+
+  /* ─── TRAIN TABLE ─── */
+  .train-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 14px; box-shadow: 0 2px 20px rgba(15,26,13,0.1); }
+  table { width: 100%; border-collapse: collapse; background: white; min-width: 560px; }
+  thead tr { background: var(--deep); }
+  th {
+    padding: 13px 14px;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    color: rgba(255,255,255,0.75); text-align: left;
+  }
+  td {
+    padding: 13px 14px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(42,74,32,0.08);
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: var(--mist); }
+  .from-station { font-weight: 700; color: var(--forest); }
+  .train-name { font-weight: 600; color: var(--text); font-size: 12px; }
+  .train-num { font-size: 10px; color: var(--stone); }
+  .fare-cell { color: var(--saffron); font-weight: 700; font-size: 13px; }
+  .duration-cell { color: var(--sub); font-size: 12px; font-weight: 500; }
+  .tip-box {
+    background: var(--mist);
+    border-left: 3px solid var(--saffron);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: var(--sub);
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+  .tip-box strong { color: var(--forest); }
+
+  /* ─── STEP CARDS ─── */
+  .step-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(15,26,13,0.08);
+    margin-bottom: 16px;
+  }
+  .step-header {
+    background: var(--forest);
+    padding: 16px 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--saffron);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px; color: white; flex-shrink: 0;
+  }
+  .step-header-text { flex: 1; }
+  .step-title { font-family: 'Cinzel', serif; font-size: 15px; font-weight: 700; color: white; }
+  .step-subtitle { font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 2px; }
+  .step-body { padding: 20px; }
+
+  /* Panvel step two-col */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 480px) { .two-col { grid-template-columns: 1fr; } }
+  .mini-card {
+    background: var(--mist);
+    border-radius: 10px;
+    padding: 14px;
+  }
+  .mini-card h4 {
+    font-size: 11px; font-weight: 700; letter-spacing: 1px;
+    text-transform: uppercase; color: var(--forest);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(42,74,32,0.15);
+  }
+  .mini-list { list-style: none; }
+  .mini-list li {
+    font-size: 12px; color: var(--sub); padding: 4px 0;
+    display: flex; align-items: flex-start; gap: 6px; line-height: 1.5;
+  }
+  .mini-list li::before { content: '›'; color: var(--saffron); font-weight: 700; flex-shrink: 0; }
+
+  /* Trek vs Ropeway */
+  .option-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 460px) { .option-grid { grid-template-columns: 1fr; } }
+  .option-card {
+    border-radius: 12px;
+    padding: 16px;
+    border: 2px solid transparent;
+  }
+  .option-card.trek { background: rgba(42,74,32,0.07); border-color: rgba(42,74,32,0.2); }
+  .option-card.rope { background: rgba(232,101,26,0.06); border-color: rgba(232,101,26,0.2); }
+  .option-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; margin-bottom: 10px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .option-card.trek .option-label { color: var(--forest); }
+  .option-card.rope .option-label { color: var(--saffron); }
+  .option-detail { font-size: 12px; color: var(--sub); line-height: 1.7; }
+  .option-detail strong { color: var(--text); }
+
+  /* ─── BUDGET TABLE ─── */
+  .budget-section { background: var(--deep); padding: 48px 20px; }
+  .budget-section h2 { color: var(--cream); }
+  .budget-section .section-tag { color: var(--gold); }
+  .budget-section .section-tag::after { background: var(--gold); }
+
+  .budget-group { margin-bottom: 24px; }
+  .budget-group-title {
+    font-size: 10px; font-weight: 700; letter-spacing: 3px;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 12px; padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .budget-row {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    font-size: 13px;
+  }
+  .budget-row:last-child { border-bottom: none; }
+  .budget-row-label { color: rgba(255,255,255,0.75); display: flex; align-items: center; gap: 8px; }
+  .budget-row-label .bicon { font-size: 15px; }
+  .budget-row-cost { color: var(--gold); font-weight: 700; font-size: 14px; }
+
+  .budget-sub-table { width: 100%; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
+  .budget-sub-table th { padding: 10px 14px; font-size: 10px; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.04); text-align: left; }
+  .budget-sub-table td { padding: 10px 14px; font-size: 12px; color: rgba(255,255,255,0.8); border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .budget-sub-table tr:last-child td { border-bottom: none; }
+  .budget-sub-table .cost { color: var(--gold); font-weight: 700; text-align: right; }
+
+  .total-card {
+    background: var(--saffron);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-top: 8px;
+  }
+  .total-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-bottom: 8px; }
+  .total-amount { font-family: 'Bebas Neue', sans-serif; font-size: 64px; color: white; line-height: 1; letter-spacing: 2px; }
+  .total-sub { font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 6px; }
+
+  /* ─── SAMPLE PLAN ─── */
+  .day-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(15,26,13,0.08);
+    margin-bottom: 16px;
+  }
+  .day-header {
+    background: var(--saffron);
+    padding: 14px 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .day-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px; color: white; line-height: 1;
+  }
+  .day-label { font-size: 12px; font-weight: 700; color: rgba(255,255,255,0.85); letter-spacing: 2px; text-transform: uppercase; }
+  .day-body { padding: 20px; }
+  .day-item {
+    display: flex; gap: 12px; padding: 8px 0;
+    border-bottom: 1px solid rgba(42,74,32,0.08);
+    font-size: 13px; color: var(--sub); line-height: 1.5; align-items: flex-start;
+  }
+  .day-item:last-child { border-bottom: none; }
+  .day-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--saffron); flex-shrink: 0; margin-top: 5px; }
+
+  /* ─── THINGS TO SEE ─── */
+  .attractions-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 500px) { .attractions-grid { grid-template-columns: repeat(3, 1fr); } }
+  .attr-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(15,26,13,0.08);
+    transition: transform 0.2s;
+  }
+  .attr-card:hover { transform: translateY(-3px); }
+  .attr-img { height: 90px; overflow: hidden; }
+  .attr-img img { width: 100%; height: 100%; object-fit: cover; }
+  .attr-img .attr-placeholder {
+    height: 100%; background: var(--deep);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 28px;
+  }
+  .attr-name {
+    padding: 10px 12px;
+    font-size: 11px; font-weight: 700;
+    color: var(--forest); text-align: center;
+    letter-spacing: 0.5px;
+  }
+
+  /* ─── BEST TIME / TIPS ─── */
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 460px) { .info-grid { grid-template-columns: 1fr; } }
+  .info-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(15,26,13,0.07);
+  }
+  .info-card h4 {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--saffron);
+    margin-bottom: 14px; padding-bottom: 10px;
+    border-bottom: 1px solid rgba(232,101,26,0.15);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .info-item { display: flex; gap: 8px; padding: 6px 0; font-size: 12px; color: var(--sub); line-height: 1.55; align-items: flex-start; }
+  .info-item::before { content: '→'; color: var(--gold); flex-shrink: 0; font-weight: 700; margin-top: 1px; }
+  .season-tag {
+    display: inline-block;
+    font-size: 10px; font-weight: 700;
+    padding: 3px 10px; border-radius: 4px; margin-bottom: 4px;
+  }
+  .season-tag.best { background: rgba(42,74,32,0.12); color: var(--forest); }
+  .season-tag.good { background: rgba(201,148,26,0.12); color: var(--gold); }
+  .season-tag.hot  { background: rgba(232,101,26,0.12); color: var(--saffron); }
+
+  /* ─── QUICK FACTS ─── */
+  .facts-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 500px) { .facts-strip { grid-template-columns: repeat(4, 1fr); } }
+  .fact-tile {
+    background: var(--deep);
+    border-radius: 12px;
+    padding: 16px 14px;
+    text-align: center;
+  }
+  .fact-val { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--gold); line-height: 1; }
+  .fact-key { font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+  /* ─── CONTACTS ─── */
+  .contacts-section { background: var(--forest); padding: 48px 20px; }
+  .contact-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+  }
+  .contact-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .contact-val { font-size: 16px; font-weight: 600; color: white; }
+  .contact-sub { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 3px; }
+
+  /* ─── CONTACT CTA ─── */
+  .cta-section { padding: 48px 20px; text-align: center; background: var(--warm); }
+  .cta-section h3 { font-family: 'Cinzel', serif; font-size: 22px; color: var(--deep); margin-bottom: 8px; }
+  .cta-section p { font-size: 14px; color: var(--sub); margin-bottom: 28px; }
+  .wa-btn {
+    display: inline-flex; align-items: center; gap: 14px;
+    background: #25D366; color: white;
+    text-decoration: none;
+    padding: 18px 36px; border-radius: 50px;
+    font-size: 17px; font-weight: 700;
+    box-shadow: 0 8px 28px rgba(37,211,102,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .wa-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(37,211,102,0.45); }
+  .wa-btn svg { flex-shrink: 0; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--dark);
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.5px;
+  }
+  footer strong { color: var(--gold); }
+  .jai { display: block; font-family: 'Caveat', cursive; font-size: 20px; color: var(--saffron); margin-top: 8px; }
+
+  /* ─── FADE IN ─── */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-content > * { animation: fadeUp 0.7s ease both; }
+  .hero-eyebrow { animation-delay: 0.1s; }
+  .hero h1 { animation-delay: 0.25s; }
+  .hero-tagline { animation-delay: 0.4s; }
+  .hero-badges { animation-delay: 0.55s; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">🏰 Complete Budget Guide</div>
+    <h1>
+      <span class="from">Raigad Fort</span>
+      <span class="kerala">FROM<br>KERALA</span>
+    </h1>
+    <div class="hero-tagline">By Train &amp; Bus · Low Budget · Memorable Journey</div>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="dot">🏛️</span> Capital of Chhatrapati Shivaji</div>
+      <div class="hero-badge"><span class="dot">⛰️</span> 2,700 ft Elevation</div>
+      <div class="hero-badge"><span class="dot">📅</span> Best: Jun – Feb</div>
+    </div>
+  </div>
+</div>
+
+<!-- ROUTE STRIP -->
+<div class="route-strip">
+  <div class="route-inner">
+    <div class="route-stop"><div class="route-icon">🌴</div><div class="route-label">Kerala</div></div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop"><div class="route-icon">🚆</div><div class="route-label">Train</div><div class="route-time">16–22 hrs</div></div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop"><div class="route-icon">🏙️</div><div class="route-label">Panvel / Mumbai</div></div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop"><div class="route-icon">🚌</div><div class="route-label">Bus / Jeep</div><div class="route-time">3–4 hrs</div></div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop"><div class="route-icon">🏘️</div><div class="route-label">Pachad</div></div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop"><div class="route-icon">🚠</div><div class="route-label">Trek / Ropeway</div><div class="route-time">5 min</div></div>
+    <div class="route-arrow">→</div>
+    <div class="route-stop"><div class="route-icon">🏰</div><div class="route-label">Raigad Fort</div></div>
+  </div>
+</div>
+
+<!-- STEP 1: TRAINS -->
+<section class="section">
+  <div class="section-tag">Step 1</div>
+  <h2>Kerala → Panvel / Mumbai</h2>
+  <p style="font-size:13px; color:var(--sub); margin-bottom:20px; line-height:1.6;">Board a long distance train from major Kerala stations. Below are the popular train options:</p>
+  <div class="train-table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>From</th>
+          <th>Train</th>
+          <th>Duration</th>
+          <th>Fare (Approx)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="from-station">Ernakulam (ERS)</span><br><span style="font-size:11px;color:var(--stone)">→ Panvel (PNVL)</span></td>
+          <td><span class="train-name">Netravati Express</span><br><span class="train-num">#16345</span></td>
+          <td class="duration-cell">16–17 hrs</td>
+          <td class="fare-cell">₹550–₹1,250<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+        </tr>
+        <tr>
+          <td><span class="from-station">Kozhikode (CLT)</span><br><span style="font-size:11px;color:var(--stone)">→ Panvel (PNVL)</span></td>
+          <td><span class="train-name">Mangala Lakshadweep Express</span><br><span class="train-num">#12617</span></td>
+          <td class="duration-cell">18–19 hrs</td>
+          <td class="fare-cell">₹600–₹1,300<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+        </tr>
+        <tr>
+          <td><span class="from-station">Kannur (CNN)</span><br><span style="font-size:11px;color:var(--stone)">→ Mumbai LTT</span></td>
+          <td><span class="train-name">Matsyagandha Express</span><br><span class="train-num">#12620</span></td>
+          <td class="duration-cell">19–20 hrs</td>
+          <td class="fare-cell">₹600–₹1,300<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+        </tr>
+        <tr>
+          <td><span class="from-station">Thiruvananthapuram (TVC)</span><br><span style="font-size:11px;color:var(--stone)">→ Mumbai CSMT</span></td>
+          <td><span class="train-name">Netravati Express</span><br><span class="train-num">#16345</span></td>
+          <td class="duration-cell">20–22 hrs</td>
+          <td class="fare-cell">₹650–₹1,400<br><span style="font-size:10px;color:var(--stone);font-weight:500">Sleeper – 3AC</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tip-box">💡 <strong>Tip:</strong> Panvel is the nearest and most convenient station for Raigad Fort.</div>
+</section>
+
+<!-- STEP 2: PANVEL TO PACHAD -->
+<section class="section" style="background: var(--mist);">
+  <div class="section-tag">Step 2</div>
+  <h2>Panvel / Mumbai → Pachad</h2>
+  <div class="two-col">
+    <div class="mini-card">
+      <h4>🚉 From Panvel Station</h4>
+      <ul class="mini-list">
+        <li>Auto / Taxi to Panvel ST Stand (5–10 mins)</li>
+        <li>Take MSRTC Bus / Shared Jeep towards Panvel → Pen → Mangaon → Mahad → Pachad</li>
+        <li>Travel Time: 3–4 Hours</li>
+        <li>Bus Fare: ₹150 – ₹250</li>
+        <li>Shared Jeep: ₹250 – ₹350</li>
+      </ul>
+    </div>
+    <div class="mini-card">
+      <h4>🏛️ From Mumbai (CSMT / LTT)</h4>
+      <ul class="mini-list">
+        <li>Take MSRTC Bus to Mahad (Direct or via Pen)</li>
+        <li>Travel Time: 4–5 Hours</li>
+        <li>Fare: ₹250 – ₹350</li>
+        <li>From Mahad ST Stand: Bus / Jeep to Pachad (30–45 mins)</li>
+        <li>Fare: ₹40 – ₹60</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 3: PACHAD TO FORT -->
+<section class="section">
+  <div class="section-tag">Step 3</div>
+  <h2>Pachad → Raigad Fort</h2>
+  <div class="option-grid">
+    <div class="option-card trek">
+      <div class="option-label">🥾 Option 1: Trek</div>
+      <div class="option-detail">
+        <strong>1700+ Stone Steps</strong><br>
+        Trek Time: 45 min – 1.5 hrs<br>
+        Difficulty: Moderate<br>
+        Best in early morning<br>
+        Carry water &amp; wear comfortable shoes<br><br>
+        <strong style="color:var(--forest)">Cost: FREE</strong>
+      </div>
+    </div>
+    <div class="option-card rope">
+      <div class="option-label">🚠 Option 2: Ropeway</div>
+      <div class="option-detail">
+        Operating: 8:00 AM – 6:00 PM<br>
+        Travel Time: 4–5 Minutes<br><br>
+        <strong>One Way: ₹250</strong><br>
+        <strong>Return: ₹400</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUDGET BREAKDOWN -->
+<section class="budget-section">
+  <div class="section-tag">Cost Breakdown</div>
+  <h2>Budget Breakdown</h2>
+
+  <div class="budget-group">
+    <div class="budget-group-title">A. Travel Cost (Per Person)</div>
+    <p style="font-size:11px; color:rgba(255,255,255,0.4); margin-bottom:12px; letter-spacing:1px; text-transform:uppercase;">1. Train — Kerala → Panvel / Mumbai</p>
+    <table class="budget-sub-table">
+      <thead><tr><th>Class</th><th class="cost">Fare (Approx)</th></tr></thead>
+      <tbody>
+        <tr><td>Sleeper</td><td class="cost">₹550 – ₹700</td></tr>
+        <tr><td>3AC</td><td class="cost">₹950 – ₹1,200</td></tr>
+        <tr><td>2AC</td><td class="cost">₹1,500 – ₹2,000</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:16px 0 12px; letter-spacing:1px; text-transform:uppercase;">2. Bus / Jeep — Panvel / Mumbai → Pachad</p>
+    <table class="budget-sub-table">
+      <thead><tr><th>Mode</th><th class="cost">Fare (Approx)</th></tr></thead>
+      <tbody>
+        <tr><td>MSRTC Bus</td><td class="cost">₹150 – ₹250</td></tr>
+        <tr><td>Shared Jeep</td><td class="cost">₹250 – ₹350</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:11px; color:rgba(255,255,255,0.4); margin:16px 0 12px; letter-spacing:1px; text-transform:uppercase;">3. Pachad → Raigad Fort</p>
+    <table class="budget-sub-table">
+      <thead><tr><th>Mode</th><th class="cost">Fare (Approx)</th></tr></thead>
+      <tbody>
+        <tr><td>Trek</td><td class="cost" style="color:#5adb85;">FREE</td></tr>
+        <tr><td>Ropeway (One Way)</td><td class="cost">₹250</td></tr>
+        <tr><td>Ropeway (Return)</td><td class="cost">₹400</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="budget-group">
+    <div class="budget-group-title">B. Other Expenses</div>
+    <div class="budget-row"><span class="budget-row-label"><span class="bicon">🍽️</span> Food (2 Days)</span><span class="budget-row-cost">₹300 – ₹500</span></div>
+    <div class="budget-row"><span class="budget-row-label"><span class="bicon">💧</span> Water / Snacks</span><span class="budget-row-cost">₹100 – ₹200</span></div>
+    <div class="budget-row"><span class="budget-row-label"><span class="bicon">🛏️</span> Stay (Dorm / Budget)</span><span class="budget-row-cost">₹300 – ₹600</span></div>
+    <div class="budget-row"><span class="budget-row-label"><span class="bicon">🛺</span> Local Transport</span><span class="budget-row-cost">₹100 – ₹200</span></div>
+  </div>
+
+  <div class="total-card">
+    <div class="total-label">Total Budget (Approx) · 2 Days Per Person</div>
+    <div class="total-amount">₹1,650–₹3,500</div>
+    <div class="total-sub">Travel more. Spend less. Experience history.</div>
+  </div>
+</section>
+
+<!-- SAMPLE 2-DAY PLAN -->
+<section class="section">
+  <div class="section-tag">Itinerary</div>
+  <h2>Sample 2-Day Budget Plan</h2>
+
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-num">01</div>
+      <div><div class="day-label">Day One</div></div>
+    </div>
+    <div class="day-body">
+      <div class="day-item"><div class="day-dot"></div><span>Night: Board train from Kerala</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Next Day Morning: Reach Panvel / Mumbai</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Travel to Pachad via Bus / Jeep</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Reach Pachad, have breakfast</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Trek or Ropeway to Raigad Fort</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Explore fort, visit all major points</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Night stay at Pachad (Budget Stay / Dorm)</span></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" style="background: var(--forest);">
+      <div class="day-num">02</div>
+      <div><div class="day-label">Day Two</div></div>
+    </div>
+    <div class="day-body">
+      <div class="day-item"><div class="day-dot"></div><span>Visit nearby places if any</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Return to Mahad / Panvel</span></div>
+      <div class="day-item"><div class="day-dot"></div><span>Board train / bus back to Kerala</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- THINGS TO SEE -->
+<section class="section" style="background: var(--mist);">
+  <div class="section-tag">Attractions</div>
+  <h2>Things to See at Raigad Fort</h2>
+  <div class="attractions-grid">
+    <div class="attr-card">
+      <div class="attr-img"><div class="attr-placeholder">⚔️</div></div>
+      <div class="attr-name">Shivaji Maharaj Samadhi</div>
+    </div>
+    <div class="attr-card">
+      <div class="attr-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Raigad_Maha_Darwaza.jpg/640px-Raigad_Maha_Darwaza.jpg" alt="Maha Darwaza" loading="lazy">
+      </div>
+      <div class="attr-name">Maha Darwaza</div>
+    </div>
+    <div class="attr-card">
+      <div class="attr-img">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/0b/ab/66/takmak-tok.jpg?w=600&h=-1&s=1" alt="Takmak Tok" loading="lazy">
+      </div>
+      <div class="attr-name">Takmak Tok (Cliff Point)</div>
+    </div>
+    <div class="attr-card">
+      <div class="attr-img"><div class="attr-placeholder">🏛️</div></div>
+      <div class="attr-name">Raj Bhavan Ruins</div>
+    </div>
+    <div class="attr-card">
+      <div class="attr-img"><div class="attr-placeholder">🧱</div></div>
+      <div class="attr-name">Hirkani Bastion</div>
+    </div>
+    <div class="attr-card">
+      <div class="attr-img"><div class="attr-placeholder">🚠</div></div>
+      <div class="attr-name">Ropeway View</div>
+    </div>
+  </div>
+</section>
+
+<!-- BEST TIME & TIPS -->
+<section class="section">
+  <div class="section-tag">Travel Info</div>
+  <h2>Best Time &amp; Travel Tips</h2>
+  <div class="info-grid">
+    <div class="info-card">
+      <h4>📅 Best Time to Visit</h4>
+      <div class="info-item">
+        <div>
+          <span class="season-tag best">Monsoon (Jun–Sep)</span><br>
+          Lush greenery &amp; waterfalls — most scenic
+        </div>
+      </div>
+      <div class="info-item">
+        <div>
+          <span class="season-tag good">Winter (Oct–Feb)</span><br>
+          Pleasant weather, ideal for trekking
+        </div>
+      </div>
+      <div class="info-item">
+        <div>
+          <span class="season-tag hot">Summer (Mar–May)</span><br>
+          Hot — carry sufficient water
+        </div>
+      </div>
+    </div>
+    <div class="info-card">
+      <h4>💡 Travel Tips</h4>
+      <div class="info-item">Start early from Panvel / Mumbai</div>
+      <div class="info-item">Keep cash — ATMs not available at Pachad</div>
+      <div class="info-item">Carry water, light food &amp; raincoat (monsoon)</div>
+      <div class="info-item">Ropeway can be crowded on weekends</div>
+      <div class="info-item">Respect the fort &amp; keep it clean</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK FACTS -->
+<section class="section" style="background: var(--deep); padding-top: 40px; padding-bottom: 40px;">
+  <div style="text-align:center; margin-bottom:24px;">
+    <div class="section-tag" style="color:var(--gold); justify-content:center;">Quick Facts</div>
+    <h2 style="color: var(--cream); margin-bottom:0;">Raigad at a Glance</h2>
+  </div>
+  <div class="facts-strip">
+    <div class="fact-tile"><div class="fact-val">2,700</div><div class="fact-key">Feet High</div></div>
+    <div class="fact-tile"><div class="fact-val">1700+</div><div class="fact-key">Steps to Top</div></div>
+    <div class="fact-tile"><div class="fact-val">1200</div><div class="fact-key">Acres Fort Area</div></div>
+    <div class="fact-tile"><div class="fact-val">17th</div><div class="fact-key">Century Built</div></div>
+  </div>
+</section>
+
+<!-- IMPORTANT CONTACTS -->
+<section class="contacts-section">
+  <div class="section-tag" style="color:var(--gold);">Important Contacts</div>
+  <h2 style="color:var(--cream); margin-bottom:24px;">Key Numbers</h2>
+  <div class="contact-card">
+    <div class="contact-label">🌐 MSRTC Enquiry</div>
+    <div class="contact-val">msrtc.maharashtra.gov.in</div>
+  </div>
+  <div class="contact-card">
+    <div class="contact-label">🚠 Raigad Ropeway</div>
+    <div class="contact-val">+91 83083 98982</div>
+  </div>
+  <div class="contact-card">
+    <div class="contact-label">ℹ️ Tourist Information (Mahad)</div>
+    <div class="contact-val">+91 94238 59316</div>
+  </div>
+  <div class="contact-card">
+    <div class="contact-label">🚨 Police / Emergency</div>
+    <div class="contact-val">112</div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="cta-section">
+  <h3>Need More Info?</h3>
+  <p>Have questions about the trip? We're happy to help you plan!</p>
+  <a href="https://wa.me/919061942367" target="_blank" class="wa-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    +91 90619 42367
+  </a>
+  <p style="margin-top:16px; font-family:'Caveat',cursive; font-size:18px; color:var(--stone);">Chat with us on WhatsApp anytime 💬</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Raigad Fort from Kerala — Complete Budget Guide</strong><br>
+  Timings &amp; fares approximate · Verify on IRCTC &amp; MSRTC before travel
+  <span class="jai">⚔️ Jai Shivaji Maharaj! 🚩</span>
+</footer>
+
+</body>
+</html>
